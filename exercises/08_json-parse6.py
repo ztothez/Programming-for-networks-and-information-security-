@@ -1,4 +1,4 @@
-#Toni Tuunainen 1.3.3.1: Demonstration - MapQuest Directions API Application
+#Toni Tuunainen 1.3.3.17: Activity - Test JSON Iteration and Application Function
 import urllib.parse
 import requests
 
@@ -17,9 +17,11 @@ while True:
     json_status = json_data["info"]["statuscode"]
     if json_status == 0:
         print("API Status: " + str(json_status) + " = A successful route call.\n")
-        print("=============================================")
         print("Directions from " + (orig) + " to " + (dest))
-        print("Trip Duration: " + (json_data["route"]["formattedTime"]))
-        print("Kilometers: " + str("{:.2f}".format((json_data["route"]["distance"])*1.61)))
+        print("Trip Duration:   " + str(json_data["route"]["formattedTime"]))
+        print("Kilometers:      " + str("{:.2f}".format((json_data["route"]["distance"])*1.61)))
         print("Fuel Used (Ltr): " + str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78)))
         print("=============================================")
+        for each in json_data["route"]["legs"][0]["maneuvers"]:
+            print((each["narrative"]) + " (" + str("{:.2f}".format((each["distance"])*1.61) + " km)"))
+        print("=============================================\n")
