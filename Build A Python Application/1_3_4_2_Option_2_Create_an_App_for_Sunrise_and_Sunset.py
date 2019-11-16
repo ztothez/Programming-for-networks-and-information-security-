@@ -1,6 +1,5 @@
-#Toni Tuunainen 1.3.3.8: Activity - Test Status and URL Print Commands
+#Toni Tuunainen 1.3.4.2: Option 2 - Create an App for Sunrise and Sunset
 
-import urllib.parse
 import requests
 from datetime import datetime, timedelta
 import time
