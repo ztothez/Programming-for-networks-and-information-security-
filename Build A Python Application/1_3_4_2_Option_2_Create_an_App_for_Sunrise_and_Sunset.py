@@ -1,9 +1,7 @@
 #Toni Tuunainen 1.3.4.2: Option 2 - Create an App for Sunrise and Sunset
-
-import requests
+#request pip install pgeocode
+import requests, time , pgeocode
 from datetime import datetime, timedelta
-import time
-import pgeocode
 
 def timeconv(time,name):
     in_time = datetime.strptime(time, "%Y-%m-%dT%H:%M:%S%z")

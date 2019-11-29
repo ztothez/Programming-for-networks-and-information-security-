@@ -1,6 +1,6 @@
-#Toni Tuunainen 1.3.4.3: Option 3 - Create an App for the ISS
+#Toni Tuunainen 1.3.4.3: Option 3 - Create an App for the ISS normal
 
-import json, urllib.request, time, pgeocode
+import json, urllib.request, time
 
 #people in space
 url = "http://api.open-notify.org/astros.json"
