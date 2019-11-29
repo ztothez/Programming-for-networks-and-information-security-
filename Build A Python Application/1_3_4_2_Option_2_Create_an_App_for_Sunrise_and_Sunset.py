@@ -8,7 +8,7 @@ def timeconv(time,name):
     localtime = in_time+timedelta(hours=timezone)
     out_time = localtime.strftime("%H:%M:%S")
     print(name+": "+out_time)
-    
+    print(in_time)
 country = input("Add country code: ")
 postalcode = input("Add postalcode: ")
 nomi = pgeocode.Nominatim(country)
@@ -18,3 +18,4 @@ timezone = int(time.strftime("%z").replace("0","").replace("+",""))
 json_data = requests.get(url).json()
 timeconv(json_data["results"]["sunrise"],"sunrise")
 timeconv(json_data["results"]["sunset"],"sunset")
+
