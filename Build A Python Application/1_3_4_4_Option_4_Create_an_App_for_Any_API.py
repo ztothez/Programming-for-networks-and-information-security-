@@ -6,7 +6,7 @@ import requests
 import subprocess, smtplib, re
 
 
-SHODAN_API_KEY = "oC2x0L0oDdFuhFpw6jAUMWmRMGXoCqR2"
+SHODAN_API_KEY = ""
 
 api = shodan.Shodan(SHODAN_API_KEY)
 
