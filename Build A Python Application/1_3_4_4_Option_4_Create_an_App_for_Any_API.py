@@ -31,7 +31,7 @@ for item in host['data']:
 #! /usr/bin/env python
 
 
-url = "https://api.shodan.io/tools/myip?key={oC2x0L0oDdFuhFpw6jAUMWmRMGXoCqR2}"
+url = "https://api.shodan.io/tools/myip?key={}"
 json_data = requests.get(url).json()
 print("My ip is: ", json_data)
 
